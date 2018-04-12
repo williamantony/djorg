@@ -1,0 +1,35 @@
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0px auto;
+}
+
+header {
+  background-color: #eee;
+}
+
+#menu {
+
+}
+#menu > ul {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px;
+}
+#menu > ul > a {
+  color: #222222;
+  text-decoration: none;
+}
+#menu > ul > a > li {
+  padding: 15px 30px;
+  list-style-type: none;
+}
+#menu > ul > a:not(:last-child) > li {
+  border-right: 1px solid #ddd;
+}
+#menu > ul > a:hover > li {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+#content {
+
+}
