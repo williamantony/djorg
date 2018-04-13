@@ -5,19 +5,20 @@ body {
   margin: 0px;
 }
 h1 {
-  color: #000000;
-  font-size: 48px;
-  font-weight: 300;
+  color: #fff;
+  font-size: 60px;
+  font-family: 'Prosto One', cursive;
+  font-weight: 500;
   letter-spacing: 2px;
-  margin: 50px 0px;
+  padding: 35px 0px;
+  margin: 0px;
   text-shadow: 
-    1px 0px 1px #ddd, 0px 1px 1px #f0f0f0, 
-    2px 1px 1px #ddd, 1px 2px 1px #f0f0f0,
-    3px 2px 1px #ddd, 2px 3px 1px #f0f0f0,
-    4px 3px 1px #ddd, 3px 4px 1px #f0f0f0,
-    5px 4px 1px #ddd, 4px 5px 1px #f0f0f0,
-    6px 5px 1px #ddd, 5px 6px 1px #f0f0f0,
-    7px 6px 1px #ddd;
+    1px 0px 1px #3f51b5,
+    0px 1px 1px #3f51b5, 
+    2px 1px 1px #3f51b5, 1px 2px 1px rgba(255, 255, 255, 0.35),
+    3px 2px 1px rgba(63, 81, 181, 0.5), 2px 3px 1px rgba(255, 255, 255, 0.35),
+    4px 3px 1px rgba(63, 81, 181, 0.5), 3px 4px 1px rgba(255, 255, 255, 0.35),
+    5px 4px 1px rgba(63, 81, 181, 0.5), 4px 5px 1px rgba(255, 255, 255, 0.35);
 }
 h2 {
   font-size: 24px;
@@ -32,33 +33,60 @@ h2 {
 }
 
 header {
-  background-color: #eee;
+  position: relative;
+  background-color: #3f51b5;
+}
+header > .wrapper {
+  position: relative;
+}
+header > .header-gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f51b5+0,3f51b5+50,e8004d+100,e8004d+100 */
+  background: rgb(63,81,181); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(63,81,181,1) 0%, rgba(63,81,181,1) 50%, rgba(232,0,77,1) 100%, rgba(232,0,77,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(63,81,181,1) 0%,rgba(63,81,181,1) 50%,rgba(232,0,77,1) 100%,rgba(232,0,77,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(63,81,181,1) 0%,rgba(63,81,181,1) 50%,rgba(232,0,77,1) 100%,rgba(232,0,77,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f51b5', endColorstr='#e8004d',GradientType=1 ); /* IE6-9 */
+  opacity: 0.35;
 }
 
 #menu {
-
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.25);
 }
-#menu > ul {
+#menu ul {
   display: flex;
   justify-content: flex-start;
   padding: 0px;
+  margin: 0px;
 }
-#menu > ul > a {
-  color: #222222;
+#menu ul > a {
+  color: #fff;
   text-decoration: none;
 }
-#menu > ul > a > li {
+#menu ul > a > li {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.75px;
   padding: 15px 30px;
   list-style-type: none;
 }
-#menu > ul > a:not(:last-child) > li {
-  border-right: 1px solid #ddd;
+#menu ul > a:first-child > li {
+  padding-left: 0px;
 }
-#menu > ul > a:hover > li {
+#menu ul > a:not(:last-child) > li {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+#menu ul > a:hover > li {
   background-color: rgba(0, 0, 0, 0.025);
 }
-#content {
 
+#content {
+ padding: 50px 0px;
 }
 
 
