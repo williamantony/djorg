@@ -5,10 +5,25 @@ body {
   margin: 0px;
 }
 h1 {
-  font-size: 36px;
+  color: #000000;
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 50px 0px;
+  text-shadow: 
+    1px 0px 1px #ddd, 0px 1px 1px #f0f0f0, 
+    2px 1px 1px #ddd, 1px 2px 1px #f0f0f0,
+    3px 2px 1px #ddd, 2px 3px 1px #f0f0f0,
+    4px 3px 1px #ddd, 3px 4px 1px #f0f0f0,
+    5px 4px 1px #ddd, 4px 5px 1px #f0f0f0,
+    6px 5px 1px #ddd, 5px 6px 1px #f0f0f0,
+    7px 6px 1px #ddd;
 }
 h2 {
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
 }
 
 .wrapper {
@@ -52,15 +67,14 @@ header {
 .bookmark-form {
   margin: 50px 0px 25px 0px;
 }
-.bookmark-form h2.form-title {
-  margin-bottom: 30px;
-}
 .bookmark-form .form-group {
   display: flex;
 }
 .bookmark-form .form-group > label {
   min-width: 125px;
   margin-top: 10px;
+  font-size: 17px;
+  font-weight: 300;
 }
 .bookmark-form .form-control {
   padding: 10px 20px;
@@ -69,6 +83,9 @@ header {
 }
 .bookmark-form .form-control:focus {
   box-shadow: 0px 0px 0px 2px #2196f3;
+}
+.bookmark-form .form-group textarea {
+  height: 100px !important;
 }
 .bookmark-form button {
   color: #fff;
@@ -85,3 +102,18 @@ header {
   margin-left: 10px;
 }
 
+
+#main {
+  display: flex;
+}
+#main .bookmark-list-holder {
+  min-width: 40%;
+}
+#main .bookmark-form-holder {
+  min-width: 60%;
+}
+
+#main .bookmark-list > li {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
