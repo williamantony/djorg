@@ -1,3 +1,15 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  margin: 0px;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 28px;
+}
 
 .wrapper {
   max-width: 1024px;
@@ -33,3 +45,43 @@ header {
 #content {
 
 }
+
+
+
+
+.bookmark-form {
+  margin: 50px 0px 25px 0px;
+}
+.bookmark-form h2.form-title {
+  margin-bottom: 30px;
+}
+.bookmark-form .form-group {
+  display: flex;
+}
+.bookmark-form .form-group > label {
+  min-width: 125px;
+  margin-top: 10px;
+}
+.bookmark-form .form-control {
+  padding: 10px 20px;
+  border-radius: 1px;
+  background-color: #eee;
+}
+.bookmark-form .form-control:focus {
+  box-shadow: 0px 0px 0px 2px #2196f3;
+}
+.bookmark-form button {
+  color: #fff;
+  padding: 10px 20px;
+}
+.bookmark-form button.save {
+  margin-left: 125px;
+  font-weight: 500;
+  background-color: #2196f3;
+}
+.bookmark-form button.reset {
+  font-weight: 400;
+  background-color: #555;
+  margin-left: 10px;
+}
+
