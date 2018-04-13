@@ -1,7 +1,7 @@
 {% load bootstrap4 %}
 
 <div class="bookmark-form-holder">
-  <h2 class="form-title">Create New Bookmark</h2>
+  <h3 class="form-title">Create New Bookmark</h3>
   <form method="POST" class="bookmark-form">
     {% csrf_token %}
     {% bootstrap_form form %}
