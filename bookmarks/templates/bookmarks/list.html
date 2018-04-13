@@ -1,0 +1,12 @@
+<div class="bookmark-list-holder">
+  <h2>Saved Bookmarks</h2>
+  {% if bookmarks %}
+  <ol class="bookmark-list">
+    {% for bookmark in bookmarks %}
+    <li><a href="{{ bookmark.url }}">{{ bookmark.name }}</a></li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p>No bookmarks available</p>
+  {% endif %}
+</div>
