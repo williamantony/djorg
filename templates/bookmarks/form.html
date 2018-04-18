@@ -1,0 +1,13 @@
+{% load bootstrap4 %}
+
+<div class="bookmark-form-holder">
+  <h3 class="form-title">Create New Bookmark</h3>
+  <form method="POST" class="bookmark-form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="save btn btn-default">Add Bookmark</button>
+    <button type="reset" class="reset btn">Reset</button>
+    {% endbuttons %}
+  </form>
+</div>
