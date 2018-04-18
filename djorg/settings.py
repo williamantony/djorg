@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # Third-party Applications
     'bootstrap4',
     'rest_framework',
+    'graphene_django',
     # Our Applications
     'bookmarks',
     'notes',
@@ -67,7 +68,7 @@ ROOT_URLCONF = 'djorg.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,6 +85,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
+}
+
+GRAPHENE = {
+    'SCHEMA': 'notes.schema.schema',
 }
 
 WSGI_APPLICATION = 'djorg.wsgi.application'
