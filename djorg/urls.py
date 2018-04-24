@@ -17,7 +17,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.contrib import admin
-from django.urls import include, path, re_path
+from django.urls import include, path
 from django.views.generic import TemplateView
 
 from graphene_django.views import GraphQLView
@@ -28,11 +28,11 @@ router = routers.DefaultRouter()
 router.register(r'notes', NoteViewSet)
 
 urlpatterns = [
-    path('accounts/', include('allauth.urls')),
     path('bookmarks/', include('bookmarks.urls')),
     path('notes/', include('notes.urls')),
     path('files/', include('files.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('api/', include(router.urls)),
     path('graphql/', GraphQLView.as_view(graphiql = True)),
     path('', TemplateView.as_view(template_name='djorg_base.html')),

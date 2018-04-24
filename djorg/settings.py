@@ -38,11 +38,11 @@ LOGIN_REDIRECT_URL = '/'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     # Third-party Applications
     'allauth',
     'allauth.account',
@@ -76,23 +76,22 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'allauth'),
+            # os.path.join(BASE_DIR, 'allauth'),
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'bookmarks', 'templates', 'bookmarks'),
-            os.path.join(BASE_DIR, 'notes', 'templates', 'notes'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
-            'context_processors': [
+            'context_processors': (
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+            ),
         },
     },
 ]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
