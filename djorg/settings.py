@@ -32,6 +32,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 # ALLOWED_HOSTS.append('0.0.0.0')
 
 SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 INSTALLED_APPS = [
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     # Our Applications
     'bookmarks',
     'notes',
+    'files',
 ]
 
 MIDDLEWARE = [
@@ -73,12 +75,18 @@ ROOT_URLCONF = 'djorg.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'allauth'),
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'bookmarks', 'templates', 'bookmarks'),
+            os.path.join(BASE_DIR, 'notes', 'templates', 'notes'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -160,11 +168,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = '/app/static/'
+STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-]
+)
 
-# forever-cacheable files and compression
+# # forever-cacheable files and compression
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# media for uploaded files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

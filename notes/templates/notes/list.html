@@ -1,0 +1,15 @@
+<div class="note-list-holder">
+  {% if notes %}
+  <h3>Saved Notes</h3>
+  <ol class="note-list">
+    {% for note in notes %}
+      <li>
+        <p class="note-title">{{ note.title }}</p>
+        <p class="note-content">{{ note.content }}</p>
+      </li>        
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p>No Notes available</p>
+  {% endif %}
+</div>

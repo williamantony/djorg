@@ -16,7 +16,7 @@ class Query(graphene.ObjectType):
     if user.is_anonymous:
       return NoteModel.objects.none()
     else:
-      return NoteModel.objects.filter(user = user)
+      return NoteModel.objects.filter(user=user)
 
 
 schema = graphene.Schema(query=Query)

@@ -1,0 +1,17 @@
+<div class="files-list-holder">
+  {% if files %}
+  <h3>Stored Files</h3>
+  <ol class="files-list">
+    {% for file in files %}
+      <a href="/media/{{ file.upload }}">
+        <li>
+          <img src="/media/{{ file.upload }}" />
+          <p class="file-name">{{ file.name }}</p>
+        </li>
+      </a>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p>No files uploaded</p>
+  {% endif %}
+</div>

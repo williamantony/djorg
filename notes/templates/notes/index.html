@@ -1,0 +1,18 @@
+{% extends "djorg_base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}Djorg - Notes{% endblock %}
+
+{% block content %}
+
+  <h2>Notes</h2>
+
+  <div id="main">
+
+    {% include "notes/list.html" %}
+
+    {% include "notes/form.html" %}
+
+  </div>
+
+{% endblock %}
