@@ -33,6 +33,9 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/accounts/login/'
+LOGOUT_URL = '/accounts/logout/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # Application definition
 INSTALLED_APPS = [
@@ -92,6 +95,12 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.request",
+    "django.contrib.auth.context_processors.auth",
+    "allauth.account.context_processors.account",
+    "allauth.socialaccount.context_processors.socialaccount",
+)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
