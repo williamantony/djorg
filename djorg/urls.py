@@ -24,10 +24,13 @@ from graphene_django.views import GraphQLView
 from rest_framework import routers
 from notes.api import NoteViewSet
 
+from .views import index as homepage_view
+
 router = routers.DefaultRouter()
 router.register(r'notes', NoteViewSet)
 
 urlpatterns = [
+    path('', homepage_view, name='index'),
     path('bookmarks/', include('bookmarks.urls')),
     path('notes/', include('notes.urls')),
     path('files/', include('files.urls')),
@@ -35,5 +38,4 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('api/', include(router.urls)),
     path('graphql/', GraphQLView.as_view(graphiql = True)),
-    path('', TemplateView.as_view(template_name='djorg_base.html')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
