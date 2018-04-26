@@ -83,26 +83,33 @@ header > .header-gradient {
   color: #fff;
   text-decoration: none;
 }
-#menu ul > a > li {
+#menu ul > a > li,
+#menu ul > form > button {
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.75px;
+  border: 0px;
   padding: 15px 30px;
   list-style-type: none;
 }
-#menu ul > a:first-child > li {
+#menu ul > a:first-child > li,
+#menu ul > form:first-child > button {
   padding-left: 0px;
 }
-#menu ul > a:not(:last-child) > li {
+#menu ul > a:not(:last-child) > li,
+#menu ul > form:not(:last-child) > button {
   border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
-#menu ul > a:hover > li {
+#menu ul > a:hover > li,
+#menu ul > form:hover > button {
   background-color: rgba(0, 0, 0, 0.025);
 }
 
 #content {
 padding: 50px 0px;
 }
+
 
 
 
