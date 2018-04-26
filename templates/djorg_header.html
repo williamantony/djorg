@@ -22,9 +22,10 @@
           <li>Files</li>
         </a>
 
-        <a href="/accounts" style="position: absolute; right: 0px;">
-          <li style="background-color: rgba(0, 0, 0, 0.5)">Accounts</li>
-        </a>
+        <form action="/accounts/logout/" method="POST" style="position: absolute; right: 0px;">
+          {% csrf_token %}
+          <button style="background-color: rgba(0, 0, 0, 0.5)">Sign Out</button>
+        </form>
       </ul>
       {% endblock %}
     </div>
