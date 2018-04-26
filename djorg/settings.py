@@ -184,7 +184,7 @@ STATICFILES_DIRS = (
 )
 
 # # forever-cacheable files and compression
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # media for uploaded files
 MEDIA_URL = '/media/'
